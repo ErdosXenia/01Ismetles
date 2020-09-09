@@ -7,4 +7,4 @@
 	- Kő legyőzi az ollót
 	- Papír legyőzi a követ
 	- Olló legyőzi a papírt
-- [] Kiírjuk az eredményt
+- [x] Kiírjuk az eredményt
