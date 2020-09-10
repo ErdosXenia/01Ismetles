@@ -109,6 +109,16 @@ namespace _01Ismetles
             stat.Close();
             Console.WriteLine("----------->Statisztika vége<------------");
         }
+
+        private static void Statisztikafajlbairas()
+        {
+            StreamWriter sw = new StreamWriter("statisztika.txt");
+            for (int i = 0; i < length; i++)
+            {
+
+            }
+            sw.Close();
+        }
         static void Main(string[] args)
         {
             Statisztikafajbol();
@@ -129,6 +139,8 @@ namespace _01Ismetles
             }
 
             Statisztikakiiras();
+
+            Statisztikafajlbairas();
 
             Console.ReadKey();
         }

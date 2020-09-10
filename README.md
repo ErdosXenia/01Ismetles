@@ -23,7 +23,7 @@
 [x] Statisztika megvalósítása
    - gép, játékos, mennyi menet
 
-[]Eredmények fájlba írása és megjelenítése
+[x]Eredmények fájlba írása és megjelenítése
      1. menet
      2. játékos
      3. gép
