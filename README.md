@@ -16,3 +16,6 @@
     - 2: ember nyer
 - [x] Kiírjuk az eredményt
 	- Kiírás külön metódusban
+
+## Játékmenet 2.0
+[] Addig fogunk játszani amíg ki nem lépünk a játékból

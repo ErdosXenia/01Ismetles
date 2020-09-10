@@ -60,15 +60,41 @@ namespace _01Ismetles
                 return 2;
             }
         }
+        private static bool AkarJatszani()
+        {
+            Console.WriteLine("------------------------------");
+            Console.Write("Tovább? [i/n]: ");
+            string valasz = Console.ReadLine().ToLower();
+            Console.WriteLine("\n------------------------------");
+
+            if (valasz == "i")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
         static void Main(string[] args)
         {
-            int gepvalasz = GepValasztas();
+            bool tovabb = true;
 
-            int jatekosvalasz = JatekosValasztas();
+            while (tovabb)
+            {
+                int gepvalasz = GepValasztas();
 
-            EredmenyKiiras(gepvalasz, jatekosvalasz);
+                int jatekosvalasz = JatekosValasztas();
+
+                EredmenyKiiras(gepvalasz, jatekosvalasz);
+
+                tovabb = AkarJatszani();
+            }
+            
 
             Console.ReadKey();
         }
+
+       
     }
 }
