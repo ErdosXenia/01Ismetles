@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace _01Ismetles
 {
@@ -90,8 +91,28 @@ namespace _01Ismetles
                 "\t Játekos győzelmének száma: {1}" +
                 "\t Gép győzelmének száma: {2}", jatekmenet, jatekosnyer, gepnyer);
         }
+        private static void Statisztikafajbol()
+        {
+            StreamReader stat = new StreamReader("statisztika.txt");
+            while (!stat.EndOfStream)
+            {
+                string[] szovegadat = stat.ReadLine().Split(';');
+                int[] adat = new int[3];
+              
+                for (int i = 0; i < adat.Length; i++)
+                {
+                    adat[i] = int.Parse(szovegadat[i]);//Convert.ToInt32... is jó
+                }
+
+                Console.WriteLine("{0} {1} {2}",adat[0], adat[1], adat[2]);
+            }
+            stat.Close();
+            Console.WriteLine("----------->Statisztika vége<------------");
+        }
         static void Main(string[] args)
         {
+            Statisztikafajbol();
+
             bool tovabb = true;
 
             while (tovabb)
