@@ -9,6 +9,11 @@ namespace _01Ismetles
     class Program
     {
         static string[] lehetoseg = new string[] { "kő", "papír", "olló" };
+
+        static int gepnyer = 0;
+        static int jatekosnyer = 0;
+        static int jatekmenet = 0;
+
         static int GepValasztas()
         {
             Random vel = new Random();
@@ -53,10 +58,12 @@ namespace _01Ismetles
                        (ember == 2 && gep == 0)
                      ) // gép nyer
             {
+                gepnyer++;
                 return 1;
             }
             else //játékos nyer
             {
+                jatekosnyer++;
                 return 2;
             }
         }
@@ -76,12 +83,21 @@ namespace _01Ismetles
                 return false;
             }
         }
+
+        private static void Statisztikakiiras()
+        {
+            Console.WriteLine("Menetek száma: {0}" +
+                "\t Játekos győzelmének száma: {1}" +
+                "\t Gép győzelmének száma: {2}", jatekmenet, jatekosnyer, gepnyer);
+        }
         static void Main(string[] args)
         {
             bool tovabb = true;
 
             while (tovabb)
             {
+                jatekmenet++;
+
                 int gepvalasz = GepValasztas();
 
                 int jatekosvalasz = JatekosValasztas();
@@ -90,7 +106,8 @@ namespace _01Ismetles
 
                 tovabb = AkarJatszani();
             }
-            
+
+            Statisztikakiiras();
 
             Console.ReadKey();
         }

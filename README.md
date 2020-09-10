@@ -18,4 +18,7 @@
 	- Kiírás külön metódusban
 
 ## Játékmenet 2.0
-[] Addig fogunk játszani amíg ki nem lépünk a játékból
+[x] Addig fogunk játszani amíg ki nem lépünk a játékból
+
+[] Statisztika megvalósítása
+   - gép, játékos, mennyi menet
