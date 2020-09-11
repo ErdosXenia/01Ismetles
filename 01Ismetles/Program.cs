@@ -112,11 +112,11 @@ namespace _01Ismetles
 
         private static void Statisztikafajlbairas()
         {
-            StreamWriter sw = new StreamWriter("statisztika.txt");
-            for (int i = 0; i < length; i++)
-            {
-
-            }
+            
+            string adat = jatekmenet.ToString() + ";" + jatekosnyer.ToString() + ";" + gepnyer.ToString();
+            //FileStream ki = new FileStream("statisztika.txt", FileMode.Append);
+            StreamWriter sw = new StreamWriter("statisztika.txt", true);
+            sw.WriteLine(adat);
             sw.Close();
         }
         static void Main(string[] args)
